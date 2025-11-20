@@ -5,7 +5,7 @@ Created on Mon Jul  7 10:35:29 2025
 @author: student
 """
 
-s1='Slock Ahuja'
+s1='DHIMANT BHALSOD'
 print(s1)
 s2='ICT'
 s3='Department'
