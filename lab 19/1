@@ -1,0 +1,12 @@
+import sympy as sp
+
+def z_transform_unit_step():
+    n = sp.symbols('n')
+    u = sp.Heaviside(n)  # unit step
+    z = sp.symbols('z')
+    
+    U = sp.summation(u * z**(-n), (n, 0, sp.oo))
+    return sp.simplify(U)
+
+U_z = z_transform_unit_step()
+print("Z-transform of unit step u[n] =", U_z)
