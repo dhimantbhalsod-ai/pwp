@@ -1,0 +1,15 @@
+import numpy as np
+from scipy.signal import TransferFunction
+
+num = [1]
+den = [1, -0.5]  # 1 - 0.5z^-1
+
+system = TransferFunction(num, den)
+
+poles = system.poles
+print("Poles:", poles)
+
+if all(abs(p) < 1 for p in poles):
+    print("System is Stable")
+else:
+    print("System is Unstable")
