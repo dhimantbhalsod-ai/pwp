@@ -1,0 +1,31 @@
+post lab 1
+
+import pandas as pd
+
+data = {
+    'Name': ['Riya', 'Samar', 'Vihan', 'Meera'],
+    'Age': [19, 24, 27, 22],
+    'City': ['Delhi', 'Pune', 'Hyderabad', 'Ahmedabad']
+}
+
+df = pd.DataFrame(data)
+
+print("Column Data Types:")
+print(df.dtypes)
+
+post lab 2.
+
+import pandas as pd
+import numpy as np
+
+data = {
+    'Name': ['Riya', 'Samar', 'Vihan', 'Meera'],
+    'Age': [19, np.nan, 27, 22]
+}
+
+df = pd.DataFrame(data)
+
+df['Age'].fillna(df['Age'].mean(), inplace=True)
+
+print("DataFrame after filling missing values:")
+print(df)
