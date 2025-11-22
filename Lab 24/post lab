@@ -1,0 +1,36 @@
+1]
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = { 
+    'Product': ['A', 'B', 'C', 'D', 'E'], 
+    'Sales': [100, 200, 150, 300, 250], 
+    'Profit': [30, 70, 50, 120, 90] 
+}
+
+df = pd.DataFrame(data)
+
+# 1. Bar Chart for Sales
+plt.figure(figsize=(6,4))
+plt.bar(df['Product'], df['Sales'])
+plt.title("Product-wise Sales")
+plt.xlabel("Product")
+plt.ylabel("Sales")
+plt.show()
+
+# 2. Line Chart for Profit
+plt.figure(figsize=(6,4))
+plt.plot(df['Product'], df['Profit'], marker='o')
+plt.title("Product-wise Profit")
+plt.xlabel("Product")
+plt.ylabel("Profit")
+plt.show()
+
+# 3. Scatter Plot (Sales vs Profit)
+plt.figure(figsize=(6,4))
+plt.scatter(df['Sales'], df['Profit'])
+plt.title("Sales vs Profit")
+plt.xlabel("Sales")
+plt.ylabel("Profit")
+plt.show()
