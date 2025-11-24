@@ -1,0 +1,18 @@
+import serial import
+time
+port = "coMз•
+baud_rate = 9600
+try:
+ser = serial.Serial(port, baud_ rate, timeout-1)
+print(f"Connected to (port) at (baud rate) baud.")
+message = "Hello Arduino! \n" \
+ser.write(message.encode(utf-8*))
+print(f"Sent: (message.strip()]")
+time sleep (1)
+if ser. in waiting ›
+response = ser-readline() decode("utf-8*).strip()
+print (f"Received: (response)*)
+ser.close()
+print("Connection closed. ")
+except serial.SerialException as e:
+print(f"Error: (e}")
